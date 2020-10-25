@@ -7,9 +7,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
+//-------------------------------------------------------------------
+// Im not much of a main function! Go see activity_lobby.java
+//-------------------------------------------------------------------
 public class MainActivity extends AppCompatActivity {
     static String T1 = "EnterActivity";
+    static String tv_str = "Welcome!";
+    static String tv_fill = "!";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
 
         // Define Vars
         Button B1 = (Button)(findViewById(R.id.b_Enter));
+        TextView TV1 = (TextView)(findViewById(R.id.tv_welcome));
+
+
+        // Refresh elements
+        TV1.setText(tv_str + buildRepeat(tv_fill) );
 
         //Define functionality
         B1.setOnClickListener(new View.OnClickListener(){
@@ -35,5 +46,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+    
+    protected String buildRepeat(String filler){
+        // Replate string.repeat()
+        String tv_temp = tv_str;
+
+        // Iterate to visits
+        for(int x = 0; x < Lobby.visits; x++ ){
+            // Might be targeting too low of version
+            // No String.repeat
+            tv_temp = tv_temp + filler;
+        }
+
+        return  tv_temp;
     }
 }
