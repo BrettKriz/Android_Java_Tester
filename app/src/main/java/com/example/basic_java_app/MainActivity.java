@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Refresh elements
-        TV1.setText(tv_str + buildRepeat(tv_fill) );
+        TV1.setText(buildRepeat(tv_fill) );
 
         //Define functionality
         B1.setOnClickListener(new View.OnClickListener(){

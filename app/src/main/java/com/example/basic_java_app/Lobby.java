@@ -32,7 +32,7 @@ public class Lobby extends AppCompatActivity {
 
     }
 
-    protected void gotoMain(View view){
+    public void gotoMain(View view){
         Log.i(T1, "B2 Clicked, Visits =" + addVisit());
 
         // Setup intent
@@ -77,11 +77,11 @@ public class Lobby extends AppCompatActivity {
         Log.i(T1, "Ratings Reply refreshed");
         RatingBar RB1 = (RatingBar)(findViewById(R.id.rating));
         TextView TV1 = (TextView)(findViewById(R.id.tv_rating_reply));
-        Integer stars = RB1.getNumStars();
+        long stars = (long)Math.ceil(RB1.getNumStars());
         String reply_s = "~ ~";
 
         // Index string
-        reply_s = replys[stars];
+        reply_s = replys[(int)stars];
         TV1.setText(reply_s);
 
     }
