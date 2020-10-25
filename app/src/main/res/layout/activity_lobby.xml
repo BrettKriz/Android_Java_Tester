@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lobby">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to the Lobby!"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="181dp" />
+
+    <TextView
+        android:id="@+id/tv_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You've been here 0 Times"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="255dp" />
+
+    <Button
+        android:id="@+id/b_GotoMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Goto Main"
+        app:backgroundTint="#8BC34A"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="374dp" />
+
+    <Button
+        android:id="@+id/b_ResetVisits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="doResetVisits"
+        android:text="RESET VISITS"
+        app:backgroundTint="#FF5722"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="303dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
